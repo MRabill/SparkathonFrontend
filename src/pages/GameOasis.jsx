@@ -8,7 +8,11 @@ const { Option } = Select;
 const { Title, Text, Link } = Typography;
 function GameOasis() {
   const imageSrc =
-    'https://media.licdn.com/dms/image/D5603AQFUdBEoOr0TYw/profile-displayphoto-shrink_800_800/0/1683227440776?e=2147483647&v=beta&t=GAMl8mBOLqI7mRv-rdLFaY0kwpnqVyVPGh6WtFehFEY'; // Replace with the actual URL of the image
+    'https://media.licdn.com/dms/image/D5603AQFUdBEoOr0TYw/profile-displayphoto-shrink_800_800/0/1683227440776?e=2147483647&v=beta&t=GAMl8mBOLqI7mRv-rdLFaY0kwpnqVyVPGh6WtFehFEY'; 
+  const imageRaj ='https://media.licdn.com/dms/image/D4D03AQGV_EeRLLBTNw/profile-displayphoto-shrink_800_800/0/1680368766572?e=2147483647&v=beta&t=IMdSMJ-kd8J8QZkjMKLmXZ_gaZep0IA2dPHHd9opQII';
+
+  const imageAyush ='data:image/jpeg;base64,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';  
+
   const dropdownIcon =
     'https://www.freeiconspng.com/uploads/controller-game-icon-10.png';
   const ashImg =
@@ -193,6 +197,147 @@ function GameOasis() {
               </p>
             </Row>
           </Row>
+          <Row style={{ marginTop: '20px' }}>
+            <img
+              src={imageAyush}
+              alt="Player Image"
+              style={{
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                marginRight: '10px',
+              }}
+            />
+            <Col>
+              {/* <p
+                style={{
+                  fontWeight: 'bold',
+                  fontSize: '16px',
+                  fontFamily: 'Poppins',
+                  margin: 0,
+                }}
+              >
+                Kavish
+              </p> */}
+              <Title level={2} style={{ fontSize: '17px' }}>
+                Ayush
+              </Title>
+              <p
+                style={{
+                  fontSize: '13px',
+                  fontFamily: 'Poppins',
+                  margin: 0,
+                  color: '#BABCBF',
+                }}
+              >
+                Playing Rocket League
+              </p>
+            </Col>
+            <Row>
+              <img
+                src={imageAyush}
+                alt="Player Image"
+                style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  marginLeft: '170px',
+                }}
+              />
+              <img
+                src={rabillIcon}
+                alt="Player Image"
+                style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  marginRight: '10px',
+                }}
+              />
+              <p
+                style={{
+                  fontSize: '16px',
+                  fontWeight: 'bold',
+                  fontFamily: 'Poppins',
+                  marginTop: '14px',
+                  margin: 0,
+                }}
+              >
+                ..+2
+              </p>
+            </Row>
+          </Row>
+          <Row style={{ marginTop: '20px' }}>
+            <img
+              src={imageRaj}
+              alt="Player Image"
+              style={{
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                marginRight: '10px',
+              }}
+            />
+            <Col>
+              {/* <p
+                style={{
+                  fontWeight: 'bold',
+                  fontSize: '16px',
+                  fontFamily: 'Poppins',
+                  margin: 0,
+                }}
+              >
+                Kavish
+              </p> */}
+              <Title level={2} style={{ fontSize: '17px' }}>
+                Raj
+              </Title>
+              <p
+                style={{
+                  fontSize: '13px',
+                  fontFamily: 'Poppins',
+                  margin: 0,
+                  color: '#BABCBF',
+                }}
+              >
+                Playing Genshin Impact
+              </p>
+            </Col>
+            <Row>
+              <img
+                src={imageRaj}
+                alt="Player Image"
+                style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  marginLeft: '160px',
+                }}
+              />
+              <img
+                src={ashImg}
+                alt="Player Image"
+                style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  marginRight: '10px',
+                }}
+              />
+              <p
+                style={{
+                  fontSize: '16px',
+                  fontWeight: 'bold',
+                  fontFamily: 'Poppins',
+                  marginTop: '14px',
+                  margin: 0,
+                }}
+              >
+                ..+2
+              </p>
+            </Row>
+          </Row>
+         
         </Col>
       </Row>
       <Row
