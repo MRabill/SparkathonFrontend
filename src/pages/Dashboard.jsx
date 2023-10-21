@@ -18,6 +18,7 @@ import Navbar from '../components/Navbar';
 import GameOasis from './GameOasis';
 import Employee_info from './EmployeeInfo';
 import SynergySparks from './SynergySparks';
+import RedVan from './RedVan';
 
 const { Title, Text, Link } = Typography;
 const { getMentions } = Mentions;
@@ -36,7 +37,7 @@ const items = [
   {
     key: '2',
     label: 'Red Van',
-    children: <SynergySparks />,
+    children: <RedVan />,
   },
   {
     key: '3',
