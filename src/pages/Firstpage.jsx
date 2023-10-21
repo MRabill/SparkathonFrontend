@@ -34,24 +34,24 @@ const items = [
 function FirstPage() {
   const navigate = useNavigate();
 
-  const {
-    isLoading: userLoading,
-    data: user = [],
-    isSuccess: userFetched,
-  } = useQuery(
-    ['User'],
-    () => fetchData({ url: url.BASIC }),
-    { refetchOnWindowFocus: false },
-    {
-      onError: (e) => {
-        return (
-          <Alert severity="error">This is an error alert — check it out!</Alert>
-        );
-      },
-    }
-  );
+  // const {
+  //   isLoading: userLoading,
+  //   data: user = [],
+  //   isSuccess: userFetched,
+  // } = useQuery(
+  //   ['User'],
+  //   () => fetchData({ url: url.BASIC }),
+  //   { refetchOnWindowFocus: false },
+  //   {
+  //     onError: (e) => {
+  //       return (
+  //         <Alert severity="error">This is an error alert — check it out!</Alert>
+  //       );
+  //     },
+  //   }
+  // );
 
-  console.log(user);
+  // console.log(user);
 
   return (
     <div>
@@ -61,13 +61,13 @@ function FirstPage() {
     <Button style={{background: `${COLORS.success}`}}  type="primary" onClick={() =>  navigate("/second")}>Primary Button</Button>
     <Button onClick={() =>  navigate(`/third/test`)} >Default Button</Button> */}
 
-      <div>
+      {/* <div>
         {userFetched
           ? user.payload.map((item, index) => (
               <p key={index}>{item.FirstName}</p>
             ))
           : null}
-      </div>
+      </div> */}
       <Row>
         <Col span={24}>
           <div
