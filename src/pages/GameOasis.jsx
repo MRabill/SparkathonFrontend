@@ -88,7 +88,7 @@ function GameOasis() {
                 width: '50px',
                 height: '50px',
                 borderRadius: '50%',
-                marginLeft: '400px',
+                marginLeft: '220px',
               }}
             />
             <img
@@ -106,7 +106,7 @@ function GameOasis() {
                   fontSize: '16px',
                   fontWeight: 'bold',
                   fontFamily: 'Poppins',
-                  marginTop:'17px',
+                  marginTop:'14px',
                   margin: 0,
                   
                 }}
@@ -157,7 +157,7 @@ function GameOasis() {
                 width: '50px',
                 height: '50px',
                 borderRadius: '50%',
-                marginLeft: '315px',
+                marginLeft: '133px',
               }}
             />
             <img
@@ -279,14 +279,15 @@ function GameOasis() {
                 Quest Buddy
               </label>
               <TextArea
-                autoSize={{ minRows: 2, maxRows: 6 }} // Auto-adjust the height based on content
+                autoSize={{ minRows: 2, maxRows: 7 }} // Auto-adjust the height based on content
                 style={{ borderRadius: '5px', width: '100%' }}
                 placeholder="Enter names..."
               />
             </Col>
-            <Col span={24} style={{ textAlign: 'center', marginTop: '20px' }}>
+            <Col span={24} style={{ textAlign: 'center', marginTop: '50px' }}>
           <Button
             style={{
+                marginLeft:'70px',
               width: '200px',
               height: '50px',
               backgroundColor: '#E94E0F',
