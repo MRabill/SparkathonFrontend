@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import COLORS from '../assets/color';
 import { DownloadOutlined, FileImageOutlined } from '@ant-design/icons';
 import GameOasis from './GameOasis';
+import SynergySparks from './SynergySparks';
 const { Title, Text, Link } = Typography;
 const { getMentions } = Mentions;
 
