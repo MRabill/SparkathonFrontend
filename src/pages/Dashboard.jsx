@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import COLORS from '../assets/color';
 import { DownloadOutlined, FileImageOutlined } from '@ant-design/icons';
 import Navbar from '../components/Navbar';
-
+import GameOasis from './GameOasis';
 
 const { Title, Text, Link } = Typography;
 const { getMentions } = Mentions;
@@ -208,7 +208,7 @@ function Dashboard() {
                 height: '200px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
-            // style={divStyle}}
+              // style={divStyle}}
             >
               <Col style={{ width: '100%' }}>
                 <Row style={{ marginBottom: '10px' }}>
@@ -296,7 +296,7 @@ function Dashboard() {
                 height: '200px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
-            // style={divStyle}}
+              // style={divStyle}}
             >
               <Col style={{ width: '100%' }}>
                 <Row style={{ marginBottom: '10px' }}>
@@ -339,41 +339,41 @@ function Dashboard() {
                     #Funny
                   </Title>
                 </div>
-
-</Row> */}
-                <Row style={{ marginTop: '10px' }} gutter={16} >
-                    <Col >
-                    <Tooltip title="search" >
-                    <Button
-                      type="primary"
-                      shape="circle"
-                      icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
-                    />
-                  </Tooltip>
-                  <Text strong style={{ margin: 0, color: '#9B9B9B'  }}>
-                    Image
-                  </Text>
-                    </Col>
-                 <Col>
-                 <Tooltip title="search">
-                    <Button
-                      type="primary"
-                      shape="circle"
-                      icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
-                    />
-                  </Tooltip>
-                  <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
-                    Document
-                  </Text>
-                 </Col>
-                 
-                </Row>
+              </Col>
+            </Row>
+            <Row style={{ marginTop: '10px' }} gutter={16}>
+              <Col>
+                <Tooltip title="search">
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
+                  />
+                </Tooltip>
+                <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
+                  Image
+                </Text>
+              </Col>
+              <Col>
+                <Tooltip title="search">
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
+                  />
+                </Tooltip>
+                <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
+                  Document
+                </Text>
               </Col>
             </Row>
           </div>
         </Col>
+
         <Col span={10}>
-          <div style={cardStyle}><GameOasis/></div>
+          <div style={cardStyle}>
+            <GameOasis />
+          </div>
         </Col>
       </Row>
     </div>
