@@ -13,13 +13,9 @@ import {
 import { useNavigate } from 'react-router-dom';
 import COLORS from '../assets/color';
 import { DownloadOutlined, FileImageOutlined } from '@ant-design/icons';
-
+import GameOasis from './GameOasis';
 const { Title, Text, Link } = Typography;
 const { getMentions } = Mentions;
-const imageSrc =
-  'https://media.licdn.com/dms/image/D5603AQFUdBEoOr0TYw/profile-displayphoto-shrink_800_800/0/1683227440776?e=2147483647&v=beta&t=GAMl8mBOLqI7mRv-rdLFaY0kwpnqVyVPGh6WtFehFEY';
-
-const PostComp = () => {};
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -104,10 +100,9 @@ function Dashboard() {
                 padding: '10px',
                 borderRadius: '10px',
                 background: `${COLORS.background}`,
-                height: '175px',
+                height: '200px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
-              // style={divStyle}}
             >
               <Col style={{ width: '100%' }}>
                 <Row>
@@ -117,7 +112,7 @@ function Dashboard() {
                 </Row>
                 <Mentions
                   rows={3}
-                  placeholder="Creat a new post and tag your collegue!"
+                  placeholder="You can use @ to ref user here"
                   options={[
                     {
                       value: 'KavishMojoa',
@@ -137,331 +132,54 @@ function Dashboard() {
                     },
                   ]}
                 />
-             
-                <Row style={{ marginTop: '10px' }} gutter={16}>
-                  <Col>
-                    <Tooltip title="Upload a photo">
-                      <Button
-                        type="primary"
-                        shape="circle"
-                        icon={
-                          <FileImageOutlined style={{ color: '#9B9B9B' }} />
-                        }
-                      />
-                    </Tooltip>
-                    <Text
-                      strong
-                      style={{
-                        margin: 0,
-                        color: '#9B9B9B',
-                        marginLeft: '10px',
-                      }}
-                    >
-                      Image
-                    </Text>
-                  </Col>
-                  <Col>
-                    <Col>
-                      <Tooltip title="Upload a Document">
-                        <Button
-                          type="primary"
-                          shape="circle"
-                          icon={
-                            <FileImageOutlined style={{ color: '#9B9B9B' }} />
-                          }
-                        />
-                      </Tooltip>
-                      <Text
-                        strong
-                        style={{
-                          margin: 0,
-                          color: '#9B9B9B',
-                          marginLeft: '10px',
-                        }}
-                      >
-                        Document
-                      </Text>
+                <Row></Row>
+                {/* <Row >
+    <div style={{display:'flex', alignItems: 'center', justifyContent:'center',marginTop: '10px', gap:'10px'}}>
+    <Button className='custom-button-hover' type="primary" shape="round" size={'large'} style={{paddingTop: '5px'}} textHoverBg={'red'}>
+                  <img
+                    src="https://i.ibb.co/wJ7Qf2m/02.png"
+                    alt="Logo"
+                    width="25"
+                  ></img>
+                </Button>
+               
+                <Text strong style={{margin: 0, color: '#9B9B9B'}}>422 Sparks</Text>
+    </div>
+
+</Row> */}
+                <Row style={{ marginTop: '10px' }} gutter={16} >
+                    <Col >
+                    <Tooltip title="search" >
+                    <Button
+                      type="primary"
+                      shape="circle"
+                      icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
+                    />
+                  </Tooltip>
+                  <Text strong style={{ margin: 0, color: '#9B9B9B'  }}>
+                    Image
+                  </Text>
                     </Col>
-                  </Col>
-                  <Col
-                    span={12}
-                    style={{ display: 'flex', justifyContent: 'end' }}
-                  >
-                    <Button type="primary" style={{ background: '#E94E0F' }}>
-                      Share
-                    </Button>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-            {/* //////////////////////////////////////////////// */}
-            <Row
-              span={10}
-              style={{
-                width: '100%',
-                margin: '10px',
-                padding: '10px',
-                borderRadius: '10px',
-                background: `${COLORS.background}`,
-                height: '200px',
-                boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
-              }}
-              // style={divStyle}}
-            >
-              <Col style={{ width: '100%' }}>
-                <Row style={{ marginBottom: '10px' }}>
-                  <Col>
-                    <img
-                      src={imageSrc}
-                      alt="Player Image"
-                      style={{
-                        width: '50px',
-                        height: '50px',
-                        borderRadius: '50%',
-                        marginRight: '10px',
-                      }}
-                    />
-                  </Col>
-                  <Col>
-                    <Title level={5} style={{ margin: '0px' }}>
-                      Kavish Mojhoa
-                    </Title>
-                    <Title
-                      type="secondary"
-                      style={{ margin: '0px', fontSize: '11px' }}
-                    >
-                      20 Oct 2023
-                    </Title>
-                  </Col>
-                </Row>
-                <div
-                  style={{
-                    width: '100%',
-                    padding: '10px',
-                    borderRadius: '10px',
-                    background: '#EAEAEA',
-                  }}
-                >
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    Mon ressi zwen en bon dimoune 😂 @Ayush
-                  </Title>
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    #Funny
-                  </Title>
-                </div>
-
-                <Row>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginTop: '10px',
-                      gap: '10px',
-                    }}
-                  >
+                 <Col>
+                 <Tooltip title="search">
                     <Button
-                      className="custom-button-hover"
                       type="primary"
-                      shape="round"
-                      size={'large'}
-                      style={{ paddingTop: '5px' }}
-                      textHoverBg={'red'}
-                    >
-                      <img
-                        src="https://i.ibb.co/wJ7Qf2m/02.png"
-                        alt="Logo"
-                        width="25"
-                      ></img>
-                    </Button>
-
-                    <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
-                      422 Sparks
-                    </Text>
-                  </div>
-                </Row>
-              </Col>
-            </Row>
-            {/* //////////////////////////////////////////////// */}
-            <Row
-              span={10}
-              style={{
-                width: '100%',
-                margin: '10px',
-                padding: '10px',
-                borderRadius: '10px',
-                background: `${COLORS.background}`,
-                height: '200px',
-                boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
-              }}
-              // style={divStyle}}
-            >
-              <Col style={{ width: '100%' }}>
-                <Row style={{ marginBottom: '10px' }}>
-                  <Col>
-                    <img
-                      src={imageSrc}
-                      alt="Player Image"
-                      style={{
-                        width: '50px',
-                        height: '50px',
-                        borderRadius: '50%',
-                        marginRight: '10px',
-                      }}
+                      shape="circle"
+                      icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
                     />
-                  </Col>
-                  <Col>
-                    <Title level={5} style={{ margin: '0px' }}>
-                      Kavish Mojhoa
-                    </Title>
-                    <Title
-                      type="secondary"
-                      style={{ margin: '0px', fontSize: '11px' }}
-                    >
-                      20 Oct 2023
-                    </Title>
-                  </Col>
-                </Row>
-                <div
-                  style={{
-                    width: '100%',
-                    padding: '10px',
-                    borderRadius: '10px',
-                    background: '#EAEAEA',
-                  }}
-                >
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    Mon ressi zwen en bon dimoune 😂 @Ayush
-                  </Title>
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    #Funny
-                  </Title>
-                </div>
-
-                <Row>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginTop: '10px',
-                      gap: '10px',
-                    }}
-                  >
-                    <Button
-                      className="custom-button-hover"
-                      type="primary"
-                      shape="round"
-                      size={'large'}
-                      style={{ paddingTop: '5px' }}
-                      textHoverBg={'red'}
-                    >
-                      <img
-                        src="https://i.ibb.co/wJ7Qf2m/02.png"
-                        alt="Logo"
-                        width="25"
-                      ></img>
-                    </Button>
-
-                    <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
-                      422 Sparks
-                    </Text>
-                  </div>
-                </Row>
-              </Col>
-            </Row>
-            {/* //////////////////////////////////////////////// */}
-            <Row
-              span={10}
-              style={{
-                width: '100%',
-                margin: '10px',
-                padding: '10px',
-                borderRadius: '10px',
-                background: `${COLORS.background}`,
-                height: '200px',
-                boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
-              }}
-              // style={divStyle}}
-            >
-              <Col style={{ width: '100%' }}>
-                <Row style={{ marginBottom: '10px' }}>
-                  <Col>
-                    <img
-                      src={imageSrc}
-                      alt="Player Image"
-                      style={{
-                        width: '50px',
-                        height: '50px',
-                        borderRadius: '50%',
-                        marginRight: '10px',
-                      }}
-                    />
-                  </Col>
-                  <Col>
-                    <Title level={5} style={{ margin: '0px' }}>
-                      Kavish Mojhoa
-                    </Title>
-                    <Title
-                      type="secondary"
-                      style={{ margin: '0px', fontSize: '11px' }}
-                    >
-                      20 Oct 2023
-                    </Title>
-                  </Col>
-                </Row>
-                <div
-                  style={{
-                    width: '100%',
-                    padding: '10px',
-                    borderRadius: '10px',
-                    background: '#EAEAEA',
-                  }}
-                >
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    Mon ressi zwen en bon dimoune 😂 @Ayush
-                  </Title>
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    #Funny
-                  </Title>
-                </div>
-
-                <Row>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginTop: '10px',
-                      gap: '10px',
-                    }}
-                  >
-                    <Button
-                      className="custom-button-hover"
-                      type="primary"
-                      shape="round"
-                      size={'large'}
-                      style={{ paddingTop: '5px' }}
-                      textHoverBg={'red'}
-                    >
-                      <img
-                        src="https://i.ibb.co/wJ7Qf2m/02.png"
-                        alt="Logo"
-                        width="25"
-                      ></img>
-                    </Button>
-
-                    <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
-                      422 Sparks
-                    </Text>
-                  </div>
+                  </Tooltip>
+                  <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
+                    Document
+                  </Text>
+                 </Col>
+                 
                 </Row>
               </Col>
             </Row>
           </div>
         </Col>
         <Col span={10}>
-          <div style={cardStyle}>dghfh</div>
+          <div style={cardStyle}><GameOasis/></div>
         </Col>
       </Row>
     </div>
