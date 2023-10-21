@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { Row, Col, Button, Modal, Form, Input } from 'antd';
+import { Row, Col, Button, Modal, Form, Input, Typography } from 'antd';
+
+const { Title, Text, Link } = Typography;
 
 function SynergySparks() {
-  const imageSrc =
-    'https://i.ibb.co/wQm7w0n/your-image.png';
+  const imageSrc = 'https://i.ibb.co/wQm7w0n/your-image.png';
   const Lux =
     'https://cf.bstatic.com/xdata/images/hotel/max1024x768/417659400.jpg?k=b11b05341b0ba878225af18e36464712d91062e929b818e877dcf357ab6b324e&o=&hp=1';
   const Casela =
     'https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/b3/cc.jpg';
-  const Catamaran ='https://taxiservicemauritius.com/wp-content/uploads/2020/04/ile-aux-benitiers-catamaran-1.jpg';  
+  const Catamaran =
+    'https://taxiservicemauritius.com/wp-content/uploads/2020/04/ile-aux-benitiers-catamaran-1.jpg';
   const containerStyle = {
     background: '#F4F5F7',
     margin: '20px',
@@ -46,7 +48,7 @@ function SynergySparks() {
       }}
     >
       <Col style={{ margin: '20px' }}>
-        <p
+        {/* <p
           style={{
             fontWeight: 'Semi-bold',
             fontSize: '25px',
@@ -56,7 +58,10 @@ function SynergySparks() {
           }}
         >
           {"Let's Get To Know Each Other"}
-        </p>
+        </p> */}
+        <Title level={2} style={{ fontSize: '20px' }}>
+          Let's Get To Know Each Other
+        </Title>
       </Col>
       <Row>
         <Col span={12}>
