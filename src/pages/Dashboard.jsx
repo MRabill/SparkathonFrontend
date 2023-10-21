@@ -15,6 +15,7 @@ import COLORS from '../assets/color';
 import { DownloadOutlined, FileImageOutlined } from '@ant-design/icons';
 import Navbar from '../components/Navbar';
 import GameOasis from './GameOasis';
+import Employee_info from './EmployeeInfo';
 
 const { Title, Text, Link } = Typography;
 const { getMentions } = Mentions;
@@ -74,9 +75,11 @@ function Dashboard() {
           </div>
         </Col>
       </Row>
-      <Row style={{ height: '100%' }} gutter={10}>
+      <Row style={{ height: '100%' }} gutter={15}>
         <Col span={4}>
-          <div style={cardStyle}>sdfgdsfg</div>
+          <div style={cardStyle}>
+            <Employee_info />
+          </div>
         </Col>
         <Col
           span={10}
