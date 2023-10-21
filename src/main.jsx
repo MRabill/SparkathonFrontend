@@ -15,6 +15,7 @@ const SecondPage = lazy(() => import('./pages/SecondPage'))
 const ThirdPage = lazy(() => import('./pages/ThirdPage'))
 const SpringModal = lazy(() => import('./pages/SpringModal'))
 const Dashboard = lazy(() => import('./pages/Dashboard'))
+const GameOasis = lazy(() => import('./pages/GameOasis'))
 
 const Loading = () => {
   return <div>Loading...</div>; 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard/>,
+  },
+  {
+    path: "/oasis",
+    element: <GameOasis/>,
   },
   {
     path: "/third/:id",
