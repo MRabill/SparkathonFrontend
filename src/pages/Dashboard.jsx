@@ -8,6 +8,7 @@ import {
   Row,
   Typography,
   Mentions,
+  Tabs,
   Tooltip,
 } from 'antd';
 import { useNavigate } from 'react-router-dom';
@@ -16,13 +17,33 @@ import { DownloadOutlined, FileImageOutlined } from '@ant-design/icons';
 import Navbar from '../components/Navbar';
 import GameOasis from './GameOasis';
 import Employee_info from './EmployeeInfo';
+import SynergySparks from './SynergySparks';
 
 const { Title, Text, Link } = Typography;
 const { getMentions } = Mentions;
 const imageSrc =
   'https://media.licdn.com/dms/image/D5603AQFUdBEoOr0TYw/profile-displayphoto-shrink_800_800/0/1683227440776?e=2147483647&v=beta&t=GAMl8mBOLqI7mRv-rdLFaY0kwpnqVyVPGh6WtFehFEY';
 
-const PostComp = () => {};
+const onChange = (key) => {
+  console.log(key);
+};
+const items = [
+  {
+    key: '1',
+    label: 'Game Oasis',
+    children: <GameOasis />,
+  },
+  {
+    key: '2',
+    label: 'Red Van',
+    children: <SynergySparks />,
+  },
+  {
+    key: '3',
+    label: 'Synergy Sparks',
+    children: <SynergySparks />,
+  },
+];
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -645,7 +666,13 @@ function Dashboard() {
 
         <Col span={10}>
           <div style={cardStyle}>
-            <GameOasis />
+            {/* <GameOasis /> */}
+            <Tabs
+              style={{ backgroundColor: COLORS.white }}
+              defaultActiveKey="1"
+              items={items}
+              onChange={onChange}
+            />
           </div>
         </Col>
       </Row>
