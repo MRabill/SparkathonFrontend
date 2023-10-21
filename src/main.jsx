@@ -14,6 +14,7 @@ const FirstPage = lazy(() => import('./pages/Firstpage'))
 const SecondPage = lazy(() => import('./pages/SecondPage'))
 const ThirdPage = lazy(() => import('./pages/ThirdPage'))
 const SpringModal = lazy(() => import('./pages/SpringModal'))
+const Dashboard = lazy(() => import('./pages/Dashboard'))
 
 const Loading = () => {
   return <div>Loading...</div>; 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/second",
     element: <SecondPage/>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard/>,
   },
   {
     path: "/third/:id",
