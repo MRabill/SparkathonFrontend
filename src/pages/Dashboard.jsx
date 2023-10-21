@@ -78,7 +78,15 @@ function Dashboard() {
         <Col span={4}>
           <div style={cardStyle}>sdfgdsfg</div>
         </Col>
-        <Col span={10} style={{ height: '100%' }}>
+        <Col
+          span={10}
+          style={{
+            height: '100%',
+            overflow: 'auto',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
+        >
           <div style={{ height: '100%' }}>
             <Row span={10}>
               <div
@@ -119,7 +127,7 @@ function Dashboard() {
                 </Row>
                 <Mentions
                   rows={3}
-                  placeholder="You can use @ to ref user here"
+                  placeholder="Create a new post and tag your collegue"
                   options={[
                     {
                       value: 'KavishMojoa',
@@ -284,6 +292,7 @@ function Dashboard() {
                 </Row>
               </Col>
             </Row>
+            {/* ////////////// */}
             {/* //////////////////////////////////////////////// */}
             <Row
               span={10}
@@ -293,7 +302,7 @@ function Dashboard() {
                 padding: '10px',
                 borderRadius: '10px',
                 background: `${COLORS.background}`,
-                height: '200px',
+                height: '470px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
               // style={divStyle}}
@@ -332,39 +341,300 @@ function Dashboard() {
                     background: '#EAEAEA',
                   }}
                 >
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    Mon ressi zwen en bon dimoune 😂 @Ayush
-                  </Title>
-                  <Title level={2} style={{ margin: '0px', fontSize: '16px' }}>
-                    #Funny
-                  </Title>
+                  <Row>
+                    <Col style={{ marginRight: '0px' }}>
+                      <Title
+                        level={2}
+                        style={{
+                          margin: '0px',
+                          fontSize: '16px',
+                          marginBottom: '10px',
+                        }}
+                      >
+                        Team Building at Casela 🦁
+                      </Title>
+                      <img
+                        src={
+                          'https://i.ytimg.com/vi/uwxuujK582I/maxresdefault.jpg'
+                        }
+                        alt="Player Image"
+                        style={{
+                          //   width: '250px',
+                          height: '250px',
+                          borderRadius: '10px',
+                          // marginRight: '10px',
+                        }}
+                      />
+                    </Col>
+                    <Col
+                      span={24}
+                      style={{ display: 'flex', justifyContent: 'end' }}
+                    >
+                      <Button type="primary" style={{ background: '#E94E0F' }}>
+                        Register
+                      </Button>
+                    </Col>
+                  </Row>
                 </div>
+
+                <Row>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginTop: '10px',
+                      gap: '10px',
+                    }}
+                  >
+                    <Button
+                      className="custom-button-hover"
+                      type="primary"
+                      shape="round"
+                      size={'large'}
+                      style={{ paddingTop: '5px' }}
+                      textHoverBg={'red'}
+                    >
+                      <img
+                        src="https://i.ibb.co/wJ7Qf2m/02.png"
+                        alt="Logo"
+                        width="25"
+                      ></img>
+                    </Button>
+
+                    <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
+                      231 Sparks
+                    </Text>
+                  </div>
+                </Row>
               </Col>
             </Row>
-            <Row style={{ marginTop: '10px' }} gutter={16}>
-              <Col>
-                <Tooltip title="search">
-                  <Button
-                    type="primary"
-                    shape="circle"
-                    icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
-                  />
-                </Tooltip>
-                <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
-                  Image
-                </Text>
+            {/* //////////////////////////////////////////////// */}
+            <Row
+              span={10}
+              style={{
+                width: '100%',
+                margin: '10px',
+                padding: '10px',
+                borderRadius: '10px',
+                background: `${COLORS.background}`,
+                height: '300px',
+                boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
+              }}
+              // style={divStyle}}
+            >
+              <Col style={{ width: '100%' }}>
+                <Row style={{ marginBottom: '10px' }}>
+                  <Col>
+                    <img
+                      src={imageSrc}
+                      alt="Player Image"
+                      style={{
+                        width: '50px',
+                        height: '50px',
+                        borderRadius: '50%',
+                        marginRight: '10px',
+                      }}
+                    />
+                  </Col>
+                  <Col>
+                    <Title level={5} style={{ margin: '0px' }}>
+                      Kavish Mojhoa
+                    </Title>
+                    <Title
+                      type="secondary"
+                      style={{ margin: '0px', fontSize: '11px' }}
+                    >
+                      20 Oct 2023
+                    </Title>
+                  </Col>
+                </Row>
+                <div
+                  style={{
+                    width: '100%',
+                    padding: '10px',
+                    borderRadius: '10px',
+                    background: '#EAEAEA',
+                  }}
+                >
+                  <Row justify="space-between">
+                    <Col style={{ marginRight: '20px' }}>
+                      <Title
+                        level={2}
+                        style={{ margin: '0px', fontSize: '16px' }}
+                      >
+                        New Fullstack Developer!
+                      </Title>
+                      <Title
+                        level={2}
+                        style={{ margin: '0px', fontSize: '16px' }}
+                      >
+                        Working in the department of Interns 🔥
+                      </Title>
+                    </Col>
+
+                    <img
+                      src={imageSrc}
+                      alt="Player Image"
+                      style={{
+                        width: '150px',
+                        height: '150px',
+                        borderRadius: '10px',
+                        // marginRight: '10px',
+                      }}
+                    />
+                  </Row>
+                </div>
+
+                <Row>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginTop: '10px',
+                      gap: '10px',
+                    }}
+                  >
+                    <Button
+                      className="custom-button-hover"
+                      type="primary"
+                      shape="round"
+                      size={'large'}
+                      style={{ paddingTop: '5px' }}
+                      textHoverBg={'red'}
+                    >
+                      <img
+                        src="https://i.ibb.co/wJ7Qf2m/02.png"
+                        alt="Logo"
+                        width="25"
+                      ></img>
+                    </Button>
+
+                    <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
+                      6 Sparks
+                    </Text>
+                  </div>
+                </Row>
               </Col>
-              <Col>
-                <Tooltip title="search">
-                  <Button
-                    type="primary"
-                    shape="circle"
-                    icon={<FileImageOutlined style={{ color: '#9B9B9B' }} />}
-                  />
-                </Tooltip>
-                <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
-                  Document
-                </Text>
+            </Row>
+            {/* //////////////////////////////////////////////// */}
+            <Row
+              span={10}
+              style={{
+                width: '100%',
+                margin: '10px',
+                padding: '10px',
+                borderRadius: '10px',
+                background: `${COLORS.background}`,
+                height: '280px',
+                boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
+              }}
+              // style={divStyle}}
+            >
+              <Col style={{ width: '100%' }}>
+                <Row style={{ marginBottom: '10px' }}>
+                  <Col>
+                    <img
+                      src={imageSrc}
+                      alt="Player Image"
+                      style={{
+                        width: '50px',
+                        height: '50px',
+                        borderRadius: '50%',
+                        marginRight: '10px',
+                      }}
+                    />
+                  </Col>
+                  <Col>
+                    <Title level={5} style={{ margin: '0px' }}>
+                      Kavish Mojhoa
+                    </Title>
+                    <Title
+                      type="secondary"
+                      style={{ margin: '0px', fontSize: '11px' }}
+                    >
+                      20 Oct 2023
+                    </Title>
+                  </Col>
+                </Row>
+                <div
+                  style={{
+                    width: '100%',
+                    padding: '10px',
+                    borderRadius: '10px',
+                    background: '#EAEAEA',
+                  }}
+                >
+                  <Row justify="space-between">
+                    <Col style={{ marginRight: '20px' }}>
+                      <Title
+                        level={2}
+                        style={{ margin: '0px', fontSize: '16px' }}
+                      >
+                        New company policy
+                      </Title>
+                      <Row align="middle">
+                        <img
+                          src={
+                            'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Circle-icons-document.svg/1024px-Circle-icons-document.svg.png'
+                          }
+                          alt="Player Image"
+                          style={{
+                            width: '75px',
+                            borderRadius: '10px',
+                            marginTop: '15px',
+                          }}
+                        />
+
+                        <Link
+                          underline
+                          href="https://www.sdworx.com/en-en/en"
+                          target="_blank"
+                          style={{
+                            margin: '0px',
+                            fontSize: '16px',
+                            marginLeft: '20px',
+                            color: COLORS.link,
+                          }}
+                        >
+                          https://www.sdworx.com/policy
+                        </Link>
+                      </Row>
+                    </Col>
+                  </Row>
+                </div>
+
+                <Row>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginTop: '10px',
+                      gap: '10px',
+                    }}
+                  >
+                    <Button
+                      className="custom-button-hover"
+                      type="primary"
+                      shape="round"
+                      size={'large'}
+                      style={{ paddingTop: '5px' }}
+                      textHoverBg={'red'}
+                    >
+                      <img
+                        src="https://i.ibb.co/wJ7Qf2m/02.png"
+                        alt="Logo"
+                        width="25"
+                      ></img>
+                    </Button>
+
+                    <Text strong style={{ margin: 0, color: '#9B9B9B' }}>
+                      55 Sparks
+                    </Text>
+                  </div>
+                </Row>
               </Col>
             </Row>
           </div>
