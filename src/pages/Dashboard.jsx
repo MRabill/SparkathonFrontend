@@ -13,13 +13,15 @@ import {
 import { useNavigate } from 'react-router-dom';
 import COLORS from '../assets/color';
 import { DownloadOutlined, FileImageOutlined } from '@ant-design/icons';
+import Navbar from '../components/Navbar';
+
 
 const { Title, Text, Link } = Typography;
 const { getMentions } = Mentions;
 const imageSrc =
   'https://media.licdn.com/dms/image/D5603AQFUdBEoOr0TYw/profile-displayphoto-shrink_800_800/0/1683227440776?e=2147483647&v=beta&t=GAMl8mBOLqI7mRv-rdLFaY0kwpnqVyVPGh6WtFehFEY';
 
-const PostComp = () => {};
+const PostComp = () => { };
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -67,8 +69,8 @@ function Dashboard() {
     <div style={{ height: '100vh' }}>
       <Row>
         <Col span={24}>
-          <div style={{ width: '100%', height: '50px', background: 'red' }}>
-            sdfgdsfg
+          <div>
+            <Navbar />
           </div>
         </Col>
       </Row>
@@ -107,7 +109,7 @@ function Dashboard() {
                 height: '175px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
-              // style={divStyle}}
+            // style={divStyle}}
             >
               <Col style={{ width: '100%' }}>
                 <Row>
@@ -137,7 +139,7 @@ function Dashboard() {
                     },
                   ]}
                 />
-             
+
                 <Row style={{ marginTop: '10px' }} gutter={16}>
                   <Col>
                     <Tooltip title="Upload a photo">
@@ -206,7 +208,7 @@ function Dashboard() {
                 height: '200px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
-              // style={divStyle}}
+            // style={divStyle}}
             >
               <Col style={{ width: '100%' }}>
                 <Row style={{ marginBottom: '10px' }}>
@@ -294,7 +296,7 @@ function Dashboard() {
                 height: '200px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
-              // style={divStyle}}
+            // style={divStyle}}
             >
               <Col style={{ width: '100%' }}>
                 <Row style={{ marginBottom: '10px' }}>
@@ -382,7 +384,7 @@ function Dashboard() {
                 height: '200px',
                 boxShadow: '0px 8px 25px rgba(208, 210, 218, 0.8)',
               }}
-              // style={divStyle}}
+            // style={divStyle}}
             >
               <Col style={{ width: '100%' }}>
                 <Row style={{ marginBottom: '10px' }}>
