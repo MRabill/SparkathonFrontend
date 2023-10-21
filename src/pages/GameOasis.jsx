@@ -37,8 +37,8 @@ function GameOasis() {
         <Col style={{ margin: '20px' }}>
           <p
             style={{
-              fontWeight: 'bold',
-              fontSize: '36px',
+              fontWeight: 'Semi-bold',
+              fontSize: '25px',
               fontFamily: 'Poppins',
               margin: 0,
               marginRight: '15px',
@@ -61,7 +61,7 @@ function GameOasis() {
               <p
                 style={{
                   fontWeight: 'bold',
-                  fontSize: '20px',
+                  fontSize: '16px',
                   fontFamily: 'Poppins',
                   margin: 0,
                 }}
@@ -70,7 +70,7 @@ function GameOasis() {
               </p>
               <p
                 style={{
-                  fontSize: '16px',
+                  fontSize: '13px',
                   fontFamily: 'Poppins',
                   margin: 0,
                   color: '#BABCBF',
@@ -131,7 +131,7 @@ function GameOasis() {
               <p
                 style={{
                   fontWeight: 'bold',
-                  fontSize: '20px',
+                  fontSize: '16px',
                   fontFamily: 'Poppins',
                   margin: 0,
                 }}
@@ -140,7 +140,7 @@ function GameOasis() {
               </p>
               <p
                 style={{
-                  fontSize: '16px',
+                  fontSize: '13px',
                   fontFamily: 'Poppins',
                   margin: 0,
                   color: '#BABCBF',
@@ -157,7 +157,7 @@ function GameOasis() {
                 width: '50px',
                 height: '50px',
                 borderRadius: '50%',
-                marginLeft: '133px',
+                marginLeft: '149px',
               }}
             />
             <img
@@ -201,7 +201,7 @@ function GameOasis() {
           <p
             style={{
               fontWeight: 'bold',
-              fontSize: '36px',
+              fontSize: '25px',
               fontFamily: 'Poppins',
               margin: 0,
               marginRight: '15px',
@@ -215,7 +215,7 @@ function GameOasis() {
                 style={{
                   display: 'block',
                   marginBottom: '5px',
-                  fontSize: '20px',
+                  fontSize: '16px',
                   fontFamily: 'Poppins',
                 }}
               >
@@ -242,7 +242,7 @@ function GameOasis() {
                 style={{
                   display: 'block',
                   marginBottom: '5px',
-                  fontSize: '20px',
+                  fontSize: '16px',
                   fontFamily: 'Poppins',
                 }}
               >
@@ -272,7 +272,7 @@ function GameOasis() {
                 style={{
                   display: 'block',
                   marginBottom: '5px',
-                  fontSize: '20px',
+                  fontSize: '16px',
                   fontFamily: 'Poppins',
                 }}
               >
@@ -287,13 +287,13 @@ function GameOasis() {
             <Col span={24} style={{ textAlign: 'center', marginTop: '50px' }}>
           <Button
             style={{
-                marginLeft:'70px',
+                marginLeft:'110px',
               width: '200px',
               height: '50px',
               backgroundColor: '#E94E0F',
               color: 'white',
               borderRadius: '15px',
-              fontSize: '20px',
+              fontSize: '16px',
               fontWeight: 'bold',
             }}
           >
